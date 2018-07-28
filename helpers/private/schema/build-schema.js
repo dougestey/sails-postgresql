@@ -55,7 +55,7 @@ module.exports = function buildSchema(definition) {
     var computedColumnType;
     switch (attribute.columnType.toLowerCase()) {
       // Default `columnType` (automigrate):
-      case '_number':          computedColumnType = (attribute.autoIncrement ? 'SERIAL' : 'REAL'); break;
+      case '_number':          computedColumnType = (attribute.autoIncrement ? 'SERIAL' : 'INTEGER'); break;
       case '_numberkey':       computedColumnType = (attribute.autoIncrement ? 'SERIAL' : 'INTEGER'); break;
       case '_numbertimestamp': computedColumnType = (attribute.autoIncrement ? 'BIGSERIAL' : 'BIGINT'); break;
       case '_string':          computedColumnType = 'TEXT'; break;
